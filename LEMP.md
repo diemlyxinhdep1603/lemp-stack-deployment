@@ -1,7 +1,7 @@
 
 
 
-# 🚀 Hướng Dẫn Thực Chiến: Xây Dựng Hệ Thống Máy Chủ Web (LEMP Stack) Toàn Diện
+# 🚀 Hướng Dẫn Thực Chiến: Xây Dựng Hệ Thống Máy Chủ Web (LEMP Stack)
 
 **Tác giả:** Huỳnh Ngọc Diễm Ly 
 **Mức độ:** Căn bản đến Nâng cao (Dành cho người mới bắt đầu)
