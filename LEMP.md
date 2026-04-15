@@ -52,7 +52,7 @@ Khách hàng yêu cầu bạn triển khai một máy chủ (VPS) hoàn toàn m�
 ## 🏗️ PHẦN 3: KIẾN TRÚC HỆ THỐNG
 
 Trước khi thực hiện, hãy nhìn vào sơ đồ dưới đây để hiểu luồng đi của dữ liệu:
-
+```mermaid
 flowchart TD
     Client([🌐 Khách hàng truy cập]) -->|HTTPS Port 443| Nginx[Nginx Web Server]
 
@@ -73,7 +73,7 @@ flowchart TD
 
     FTP -.->|Quyền ghi file| WP
     FTP -.->|Quyền ghi file| Laravel
-
+```
 ---
 
 ## 🛠️ PHẦN 4: HƯỚNG DẪN TRIỂN KHAI CHI TIẾT TỪNG BƯỚC
