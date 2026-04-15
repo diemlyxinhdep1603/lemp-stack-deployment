@@ -6,7 +6,7 @@
 **Tác giả:** Huỳnh Ngọc Diễm Ly - Technical Staff
 **Mức độ:** Căn bản đến Nâng cao (Dành cho người mới bắt đầu)
 
-Tài liệu này ghi lại toàn bộ quá trình tự tay xây dựng một máy chủ web từ con số 0. Thay vì chỉ gõ lệnh máy móc, hướng dẫn này tập trung giải thích **TẠI SAO** chúng ta lại dùng câu lệnh đó, giúp người đọc nắm vững tư duy hệ thống và bảo mật phân quyền.
+Tài liệu này ghi lại toàn bộ quá trình tự tay xây dựng một máy chủ web từ con số 0. Hướng dẫn này tập trung giải thích **TẠI SAO** chúng ta lại dùng câu lệnh đó, giúp người đọc nắm vững tư duy hệ thống và bảo mật phân quyền.
 
 ---
 
