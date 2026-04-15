@@ -1,6 +1,6 @@
 
 
-```
+
 # 🚀 Hướng Dẫn Thực Chiến: Xây Dựng Hệ Thống Máy Chủ Web (LEMP Stack) Toàn Diện
 
 **Tác giả:** Huỳnh Ngọc Diễm Ly - Technical Staff
@@ -248,4 +248,3 @@ Sửa nội dung `index` và thêm khối `location ~ \.php$` tương tự như 
 
 ## 🏆 TỔNG KẾT
 Hoàn thành dự án này, bạn không chỉ biết cài đặt một máy chủ Web hoạt động trơn tru mà còn áp dụng thành thạo nguyên tắc **Least Privilege (Đặc quyền tối thiểu)**: Tách biệt User Database, tách biệt User FTP để đảm bảo hệ thống luôn an toàn trước các cuộc tấn công.
-```
