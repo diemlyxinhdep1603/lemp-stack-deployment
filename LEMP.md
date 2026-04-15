@@ -71,10 +71,17 @@ flowchart TD
     Admin([🧑‍💻 Quản trị viên]) -->|TablePlus / Port 3306| DB
     Admin -->|FileZilla / Port 21| FTP[FTP Server: vsftpd]
 
-    FTP -.->|Quyền ghi file| WP
-    FTP -.->|Quyền ghi file| Laravel
+    FTP -.-> WP
+    FTP -.-> Laravel
 ```
----
+**📖 Giải thích luồng hoạt động của hệ thống:
+Hệ thống được thiết kế với sự chia tách rõ ràng nhằm đảm bảo tính bảo mật và hiệu năng:
+
+Luồng Khách hàng (Đường nét liền): Người dùng bên ngoài chỉ được phép đi qua "cửa chính" là cổng HTTPS (443). Nginx đóng vai trò là Lễ tân, nhận diện tên miền (wp... hoặc laravel...) để điều hướng vào đúng không gian web. Sau đó, Nginx nhờ PHP xử lý logic và truy xuất dữ liệu từ MySQL để trả về kết quả cho khách.
+
+Luồng Quản trị viên (Đường nét liền & đứt): * Quản trị Database: Quản trị viên (Admin) không đi qua cửa chính mà dùng "đường hầm riêng" qua cổng 3306 để kết nối TablePlus thẳng vào Cơ sở dữ liệu MySQL.
+
+Đẩy Code (Đường nét đứt): Khi cần cập nhật code, Admin dùng FileZilla đi qua cổng 21 (FTP Server). Các tài khoản FTP đã được phân quyền chặt chẽ, chỉ cho phép thực hiện hành động ghi/đè file trực tiếp vào các thư mục web tương ứng một cách an toàn.---
 
 ## 🛠️ PHẦN 4: HƯỚNG DẪN TRIỂN KHAI CHI TIẾT TỪNG BƯỚC
 
