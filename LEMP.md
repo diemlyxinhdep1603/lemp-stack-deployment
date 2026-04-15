@@ -53,11 +53,10 @@ Khách hàng yêu cầu bạn triển khai một máy chủ (VPS) hoàn toàn m�
 
 Trước khi thực hiện, hãy nhìn vào sơ đồ dưới đây để hiểu luồng đi của dữ liệu:
 
-```mermaid
 flowchart TD
-    Client([🌐 Khách hàng truy cập]) -->|HTTPS (Port 443)| Nginx{Nginx Web Server}
+    Client([🌐 Khách hàng truy cập]) -->|HTTPS Port 443| Nginx[Nginx Web Server]
 
-    subgraph Máy chủ VPS Ubuntu
+    subgraph VPS [Máy chủ VPS Ubuntu]
         Nginx -->|Domain wp...| WP[Thư mục WordPress]
         Nginx -->|Domain laravel...| Laravel[Thư mục Laravel]
         Nginx -->|IP/phpmyadmin| PMA[phpMyAdmin]
@@ -74,7 +73,6 @@ flowchart TD
 
     FTP -.->|Quyền ghi file| WP
     FTP -.->|Quyền ghi file| Laravel
-```
 
 ---
 
