@@ -51,7 +51,7 @@ Khách hàng yêu cầu bạn triển khai một máy chủ (VPS) hoàn toàn m�
 
 ## 🏗️ PHẦN 3: KIẾN TRÚC HỆ THỐNG
 
-Trước khi gõ lệnh, hãy nhìn vào sơ đồ dưới đây để hiểu luồng đi của dữ liệu:
+Trước khi thực hiện, hãy nhìn vào sơ đồ dưới đây để hiểu luồng đi của dữ liệu:
 
 ```mermaid
 graph TD
