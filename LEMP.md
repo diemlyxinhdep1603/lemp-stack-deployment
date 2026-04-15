@@ -54,25 +54,26 @@ Khách hàng yêu cầu bạn triển khai một máy chủ (VPS) hoàn toàn m�
 Trước khi thực hiện, hãy nhìn vào sơ đồ dưới đây để hiểu luồng đi của dữ liệu:
 
 ```mermaid
-graph TD
-    Client(Khách hàng truy cập) -->|HTTPS| Nginx(Nginx Web Server)
-    
-    subgraph VPS Ubuntu [Máy chủ VPS Ubuntu]
-    Nginx -->|Domain wp...| WP(Thư mục WordPress)
-    Nginx -->|Domain laravel...| Laravel(Thư mục Laravel)
-    Nginx -->|IP/phpmyadmin| PMA(phpMyAdmin)
-    
-    WP --> PHP(PHP 8.1)
-    Laravel --> PHP
-    PMA --> PHP
-    
-    PHP <--> MySQL[(MySQL Database)]
+flowchart TD
+    Client([🌐 Khách hàng truy cập]) -->|HTTPS (Port 443)| Nginx{Nginx Web Server}
+
+    subgraph Máy chủ VPS Ubuntu
+        Nginx -->|Domain wp...| WP[Thư mục WordPress]
+        Nginx -->|Domain laravel...| Laravel[Thư mục Laravel]
+        Nginx -->|IP/phpmyadmin| PMA[phpMyAdmin]
+
+        WP --> PHP((PHP 8.1 FPM))
+        Laravel --> PHP
+        PMA --> PHP
+
+        PHP <--> DB[(MySQL Database)]
     end
-    
-    Admin(Quản trị viên) -->|TablePlus / Port 3306| MySQL
-    Admin -->|FileZilla / Port 21| FTP(FTP Server: vsftpd)
-    FTP -.->|Quyền đẩy code| WP
-    FTP -.->|Quyền đẩy code| Laravel
+
+    Admin([🧑‍💻 Quản trị viên]) -->|TablePlus / Port 3306| DB
+    Admin -->|FileZilla / Port 21| FTP[FTP Server: vsftpd]
+
+    FTP -.->|Quyền ghi file| WP
+    FTP -.->|Quyền ghi file| Laravel
 ```
 
 ---
